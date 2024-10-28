@@ -14,8 +14,9 @@ function TodolistForm({ onSubmit, initialData = {} }) {
     setDesiredLocation("");
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
+  return ( 
+    // handling what will happen when we submit the form
+    <form onSubmit={handleSubmit}> 
       <input
         type="text"
         placeholder="Title"

@@ -90,5 +90,5 @@ This will install all required packages and create a `node_modules` folder.
 
 - **CORS Issues**: If you encounter CORS errors, ensure that the API key is correct, and that the API allows requests from localhost.
 - **Location Permissions**: The app uses the browser’s geolocation API. Make sure to grant location permissions for the app to function correctly.
-
+- **We can access it anywhere without npm start using this link**: https://my-todolist-with-527efxf60-eyerusalems-projects-02b544f0.vercel.app/
 > **Note**: ChatGPT was used to help with converting some TypeScript code to JavaScript, troubleshooting, and handling all CSS styling.

@@ -23,8 +23,8 @@ function Todolist({ todos, onEdit, onDelete, isPlaceholder }) {
           <p style={{ ...styles.description, color: isPlaceholder ? "#aaa" : "#666" }}>
             {todo.description}
           </p>
-          <p style={styles.detail}>Distance: {todo.distance || "N/A"}</p>
-          <p style={styles.detail}>Duration: {todo.duration || "N/A"}</p>
+          <p style={styles.detail}>Distance from current location: {todo.distance || "N/A"}</p>
+          <p style={styles.detail}>Time it takes from current location: {todo.duration || "N/A"}</p>
           <div style={styles.buttonContainer}>
             {!isPlaceholder && (
               <>
