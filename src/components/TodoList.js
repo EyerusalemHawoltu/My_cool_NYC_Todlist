@@ -16,6 +16,7 @@ function Todolist({ todos, onEdit, onDelete, isPlaceholder }) {
             opacity: isPlaceholder ? 0.7 : 1,
           }}
         >
+          {/* making the place holder fading */}
           <h3 style={{ ...styles.title, color: isPlaceholder ? "#888" : "#333" }}>
             {todo.title}
           </h3>
@@ -28,9 +29,11 @@ function Todolist({ todos, onEdit, onDelete, isPlaceholder }) {
             {!isPlaceholder && (
               <>
                 <button onClick={() => onEdit(todo)} style={styles.button}>
-                  <FaEdit style={styles.icon} />
+                  {/* from the "react-icons/fa"; */}
+                  <FaEdit style={styles.icon} /> 
                 </button>
                 <button onClick={() => onDelete(todo.id)} style={styles.button}>
+                   {/* from the "react-icons/ri"; */}
                   <RiDeleteBack2Line style={styles.icon} />
                 </button>
               </>
@@ -41,7 +44,7 @@ function Todolist({ todos, onEdit, onDelete, isPlaceholder }) {
     </div>
   );
 }
-
+// writing a bit of styling(chatgpt)
 const styles = {
   container: {
     display: "flex",

@@ -1,4 +1,4 @@
-// src/hooks/useLocalStorage.js
+// This code enables us to save to our local storage as long as we don't use incognito mode as long as we are using the same device we will get our tasks
 import { useState } from "react";
 
 function useLocalStorage(key, initialValue) {

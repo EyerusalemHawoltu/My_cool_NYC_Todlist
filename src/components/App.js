@@ -83,12 +83,12 @@ const App = () => {
         <TodolistForm onSubmit={handleFormSubmit} initialData={editingTodo || {}} />
       )}
 
-      {/* Pass isPlaceholder as true if displaying placeholder tasks */}
+      {}
       <Todolist
         todos={todos.length > 0 ? todos : placeholderTasks}
         onEdit={setEditingTodo}
         onDelete={(id) => setTodos(todos.filter(todo => todo.id !== id))}
-        isPlaceholder={todos.length === 0} // Conditional styling for placeholders
+        isPlaceholder={todos.length === 0} 
       />
     </div>
   );

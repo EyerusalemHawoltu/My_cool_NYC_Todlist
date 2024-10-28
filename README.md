@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# To-Do List with Distance Calculation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based to-do list application that allows users to add tasks with location information. This app calculates the distance and duration from the user's current location to a selected destination using the OpenRouteService API.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add, edit, and delete tasks
+- Select a library from a dropdown menu to set as the task's destination
+- Calculate and display distance and duration from the user's current location to the selected destination
+- Placeholder tasks are displayed with faded styling when there are no user-defined tasks
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) installed on your machine
+- An OpenRouteService API key (sign up at [OpenRouteService](https://openrouteservice.org/sign-up/) if you don’t have one)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+  -  git clone https://github.com/EyerusalemHawoltu/My_cool_NYC_Todlist.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. cd your-repository-name
+3. Install react-icons (used for the edit and delete icons):
+    - npm install react-icons
+4. Create a .env file in the root directory and add your OpenRouteService API key:
+    - REACT_APP_OPENROUTESERVICE_API_KEY=your_api_key_here
+## Running the App
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To start the application in development mode, run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+    - npm start
+This will open the app in your default browser at [http://localhost:3000](http://localhost:3000).
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Add a Task**: Click on the "Add Task" button to open the task form. Fill in the details and select a destination (library) from the dropdown.
+- **Calculate Distance**: Upon adding a task, the app will automatically calculate and display the distance and estimated duration from your current location to the selected library.
+- **Edit or Delete Tasks**: Click the edit or delete icons next to each task to modify or remove it.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Libraries Dropdown
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The dropdown menu includes several libraries with their coordinates preset. You can choose a library, and the application will calculate the distance from your current location.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Placeholder Tasks
 
-## Learn More
+When no user-defined tasks are present, placeholder tasks will be displayed in a faded style to provide an example of how tasks will appear.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```plaintext
+src/
+├── components/
+│   ├── App.js               # Main application component
+│   ├── Todolist.js          # Component to display tasks with distance
+│   ├── TodolistForm.js      # Form component for adding/editing tasks
+│   └── LibraryDropdown.js   # Dropdown component for selecting a library
+├── hooks/
+│   └── useLocalStorage.js   # Custom hook to store tasks in local storage
+└── index.js                 # Entry point for the React application
+## Technologies Used
 
-### Code Splitting
+- **React**: Frontend library
+- **OpenRouteService API**: For calculating distances and durations
+- **CSS**: Inline styling for UI components
+- **react-icons**: Icon library used for the edit and delete buttons
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Environment Variables
 
-### Analyzing the Bundle Size
+This project requires an API key for OpenRouteService, which should be stored in a `.env` file:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```plaintext
+REACT_APP_OPENROUTESERVICE_API_KEY=your_api_key_here
 
-### Making a Progressive Web App
+Dependencies
+To install all dependencies and set up the project, run:
+ -npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This will install all required packages and create a node_modules folder.
 
-### Advanced Configuration
+Troubleshooting
+CORS Issues: If you encounter CORS errors, ensure that the API key is correct, and that the API allows requests from localhost.
+Location Permissions: The app uses the browser’s geolocation API. Make sure to grant location permissions for the app to function correctly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Chatgpt was used for changing some codes from typescript to javascrpit, trouble shooting and all css was done with chatgpt
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

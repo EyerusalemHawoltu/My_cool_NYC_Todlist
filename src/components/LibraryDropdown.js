@@ -1,6 +1,6 @@
 // src/components/LibraryDropdown.js
 import React from "react";
-
+// this is to make it easy for user to get the coordinates of libraries
 const libraries = [
     { name: "Bobst Library", coordinates: "-73.9970,40.7295" },
     { name: "Avery Fisher Center (in Bobst Library)", coordinates: "-73.9971,40.7296" },
@@ -22,7 +22,7 @@ const libraries = [
     { name: "Mid-Manhattan Library - NYPL", coordinates: "-73.9803,40.7528" },
 ];
 
-const LibraryDropdown = ({ onSelect }) => {
+const LibraryDropdown = ({ onSelect }) => { //control the Choose a Library to get your coordinates 
   return (
     <div style={{ position: "absolute", right: "20px", top: "20px" }}>
       <label htmlFor="libraryDropdown">Choose a Library to get your coordinates:</label>
