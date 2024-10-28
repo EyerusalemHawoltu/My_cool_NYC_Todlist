@@ -35,11 +35,11 @@ Here’s a cleaned-up and formatted version:
 
 # To start the application, run:
 npm start
-```
 
 This will open the app in your default browser at [http://localhost:3000](http://localhost:3000).
 
 ## Usage
+
 
 1. **Add a Task**: Click on the "Add Task" button to open the task form. Fill in the details and select a destination (library) from the dropdown.
 2. **Calculate Distance**: Upon adding a task, the app will automatically calculate and display the distance and estimated duration from your current location to the selected library.
@@ -65,7 +65,6 @@ src/
 ├── hooks/
 │   └── useLocalStorage.js   # Custom hook to store tasks in local storage
 └── index.js                 # Entry point for the React application
-```
 
 ## Technologies Used
 
@@ -79,14 +78,12 @@ src/
 This project requires an API key for OpenRouteService, which should be stored in a `.env` file:
 
 REACT_APP_OPENROUTESERVICE_API_KEY=your_api_key_here
-```
 
 ## Dependencies
 
 To install all dependencies and set up the project, run:
 
 npm install
-```
 This will install all required packages and create a `node_modules` folder.
 
 ## Troubleshooting
@@ -95,4 +92,3 @@ This will install all required packages and create a `node_modules` folder.
 - **Location Permissions**: The app uses the browser’s geolocation API. Make sure to grant location permissions for the app to function correctly.
 
 > **Note**: ChatGPT was used to help with converting some TypeScript code to JavaScript, troubleshooting, and handling all CSS styling.
-```
