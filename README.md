@@ -31,8 +31,12 @@ A React-based to-do list application that allows users to add tasks with locatio
 
 To start the application in development mode, run:
 
-```bash
-    - npm start
+Here’s a cleaned-up and formatted version:
+
+# To start the application, run:
+npm start
+```
+
 This will open the app in your default browser at [http://localhost:3000](http://localhost:3000).
 
 ## Usage
@@ -51,7 +55,7 @@ When no user-defined tasks are present, placeholder tasks will be displayed in a
 
 ## Project Structure
 
-plaintext
+
 src/
 ├── components/
 │   ├── App.js               # Main application component
@@ -61,7 +65,7 @@ src/
 ├── hooks/
 │   └── useLocalStorage.js   # Custom hook to store tasks in local storage
 └── index.js                 # Entry point for the React application
-
+```
 
 ## Technologies Used
 
@@ -72,28 +76,23 @@ src/
 
 ## Environment Variables
 
-This project requires an API key for OpenRouteService, which should be stored in a .env file:
+This project requires an API key for OpenRouteService, which should be stored in a `.env` file:
 
-plaintext
 REACT_APP_OPENROUTESERVICE_API_KEY=your_api_key_here
-
+```
 
 ## Dependencies
 
 To install all dependencies and set up the project, run:
 
-bash
 npm install
-
-
-This will install all required packages and create a node_modules folder.
+```
+This will install all required packages and create a `node_modules` folder.
 
 ## Troubleshooting
 
 - **CORS Issues**: If you encounter CORS errors, ensure that the API key is correct, and that the API allows requests from localhost.
 - **Location Permissions**: The app uses the browser’s geolocation API. Make sure to grant location permissions for the app to function correctly.
 
-
-Chatgpt was used for changing some codes from typescript to javascrpit, trouble shooting and all css was done with chatgpt
-
-
+> **Note**: ChatGPT was used to help with converting some TypeScript code to JavaScript, troubleshooting, and handling all CSS styling.
+```
