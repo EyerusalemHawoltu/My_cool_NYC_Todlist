@@ -55,7 +55,7 @@ When no user-defined tasks are present, placeholder tasks will be displayed in a
 
 ## Project Structure
 
-
+```
 src/
 ├── components/
 │   ├── App.js               # Main application component
@@ -65,7 +65,7 @@ src/
 ├── hooks/
 │   └── useLocalStorage.js   # Custom hook to store tasks in local storage
 └── index.js                 # Entry point for the React application
-
+```
 ## Technologies Used
 
 - **React**: Frontend library
